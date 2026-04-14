@@ -83,3 +83,41 @@ def most_frequent(items):
 # call the function and print the result
 result = most_frequent(items1)
 print(result)  # → cat
+
+
+# 4. count vowel from a word
+words1 = "hll"
+
+
+def vowel_in_letter(words):
+    vowel_count = {}
+    vowel = "aeiou"
+    for word in words:
+        if word in vowel:
+            if word in vowel_count:
+                vowel_count[word] += 1
+            else:
+                vowel_count[word] = 1
+    return vowel_count
+
+
+result1 = vowel_in_letter(words1)
+print(result1)
+
+# 5. Does a word have duplicate words
+
+word = "hello"
+
+
+def word_have_duplicate(word):
+    seen = {}
+    for letter in word:
+        if letter in seen:
+            return True
+        else:
+            seen[letter] = True
+    return False
+
+
+result2 = word_have_duplicate(word)
+print(result2)
